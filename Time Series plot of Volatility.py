@@ -41,8 +41,9 @@ def moving_window(S,N):
     # Calculating rollinng average of volatility
     sigma = R.rolling(window=N).std()
     sigma = sigma.dropna()
+    annualised_sigma = sigma * 252**0.5 #annualising
     
-    return sigma
+    return annualised_sigma
 
 # ---------------------------------------------
 # Exponentially weighted movign average estimate of volatility
@@ -67,8 +68,9 @@ def EWMA(S, alpha):
     R_squared = R**2
     var = R_squared.ewm(alpha=alpha, adjust=False).mean()
     sigma = var**0.5
+    annualised_sigma = sigma * 252**0.5 #annualising
     
-    return sigma
+    return annualised_sigma
     
 # -------------------------------
 # Plotting volatility-time graphs
