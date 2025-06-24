@@ -1,14 +1,11 @@
-# Time Series plot of Volatility using Rolling average and EWMA
+# Time Series plot of Volatility
 
-This project uses the rolling average and EWMA models to plot volatility based on returns from the BRK-B stock.
+This project has two codes. The Constant vs Exponential Moving Average was the exercise in Paul Wilmott Introduces Quantitative Finance Chapter 9, comparing the effects on platueing.
+The Different Volatility Models implements the: Close-to-Close, parkinson (1980), Garman & Klass (1980) and Roger & Satchells (1991) models and plots the volatility of the the BRK-B stock.
 I wrote this as a mini-project on the content taught in Paul Wilmott Introduces Quantitative Finance Chapter 9.
 
 ##Features
-- moving window function
-- exponentially weighted moving average (EWMA) function
-- 2D plot of rolling average estimate with different windows
-- 2D plot of EWMA with different alphas
-- 2D plot comparing rolling average and EWMA
+- 6 different volatility models
 
 ##Dependencies
 - Install a python environment
